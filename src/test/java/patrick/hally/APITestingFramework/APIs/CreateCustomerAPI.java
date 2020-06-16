@@ -11,6 +11,7 @@ public class CreateCustomerAPI extends BaseTest {
 
 	public static Response sendPostRequestToCreateCustomerAPIWithValidAuthKey(Hashtable<String, String> data) {
 
+		//Sample comment
 		// Authorization needed by Stripe to interact with API
 		Response response = given().auth().basic(config.getProperty("validSecretKey"), "")
 				.formParam("email", data.get("email")).formParam("description", data.get("description"))
